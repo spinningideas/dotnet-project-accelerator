@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DNPA.Models\DNPA.Models.csproj" />
+    <ProjectReference Include="..\DNPA.Repositories.EntityFramework\DNPA.Repositories.EntityFramework.csproj" />
+    <ProjectReference Include="..\DNPA.Repositories\DNPA.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "1947016f-8118-4208-8aef-666b0286baf1",
+		"name": "DNPA-API",
+		"description": "Collection of requests for dot net project accelerator API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetContinents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/continents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"continents"
+					]
+				},
+				"description": "Get all Continents"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCountriesByContinentCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/countries/NA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"countries",
+						"NA"
+					]
+				},
+				"description": "Get all Continents"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCountries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/countries/search/united",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"countries",
+						"search",
+						"united"
+					]
+				},
+				"description": "Get all Continents"
+			},
+			"response": []
+		},
+		{
+			"name": "Heartbeat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/heartbeat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"heartbeat"
+					]
+				},
+				"description": "Get all Continents"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
