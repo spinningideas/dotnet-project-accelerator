@@ -9,6 +9,7 @@ nupkg/
 
 # DB Project
 .jfm
+.dbmdl
 
 # User-specific files
 *.suo

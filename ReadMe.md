@@ -37,27 +37,30 @@ Create a folder for this project locally and clone the repo into it
 
 3) Setup database - run publish to push the database schema and data to "DNPA.Database" 
 
-1. Right click on "DNPA.Database" project and run publish with connection pointed to "DNPA.Database" 
+	1. Right click on "DNPA.Database" project and run publish with connection pointed to "DNPA.Database" 
 
-5) Install npm packages in DNPA.Presentation 
+4) Install npm packages in DNPA.Presentation 
 
-In the project DNPA.Presentation directory open a console for npm and run:
+	In the project DNPA.Presentation directory open a console for npm and run:
 
-1. Install packages
+	1. Install packages
 
-`npm install`
+	`npm install`
 
 5) Launch the API project (its set to run on port 5001)
 
+	1. To start the API press the green arrow (Start button) on the main Visual Studio toolbar, or press F5 or Ctrl+F5
+	2. Optionally load the postman collection in the "postman" folder and test the API using that if you are only interested in the API
+
 6) Launch the Presentation project
 
-1. Start and run the application (its set to run on port 5000)
+	1. Start and run the application (its set to run on port 5000)
 
-`npm start`
+	`npm start`
 
-Runs the app in the development mode and launches browser to http://localhost:5000
+	Runs the app in the development mode and launches browser to http://localhost:5000
 
-The page will reload if you make edits.
+	The page will reload if you make edits.
 
 ### `npm run build`
 
