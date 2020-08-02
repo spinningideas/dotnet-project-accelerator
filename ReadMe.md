@@ -22,6 +22,9 @@ The project aims to include most of the basic things one needs and includes:
 
 2) SQL Server - Can use Free Express or Developer Edition available here: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
+2.1) Install SQL Server and set yourself as 'sa'
+2.2) Create an empty local database with same name "DNPA.Database" as that in the DNPA.API project appsettings.json file for setting ConnectionStrings or edit the value in connection string to match your name
+
 ### Clone Repo
 
 Create a folder for this project locally and clone the repo into it
@@ -32,7 +35,11 @@ Create a folder for this project locally and clone the repo into it
 
 2) Build solution to get the Nuget packages
 
-3) Install npm packages
+3) Setup database - run publish to push the database schema and data to "DNPA.Database" 
+
+1. Right click on "DNPA.Database" project and run publish with connection pointed to "DNPA.Database" 
+
+5) Install npm packages in DNPA.Presentation 
 
 In the project DNPA.Presentation directory open a console for npm and run:
 
@@ -40,11 +47,15 @@ In the project DNPA.Presentation directory open a console for npm and run:
 
 `npm install`
 
-2. Start and run the application
+5) Launch the API project (its set to run on port 5001)
+
+6) Launch the Presentation project
+
+1. Start and run the application (its set to run on port 5000)
 
 `npm start`
 
-Runs the app in the development mode and launches browser to http://localhost:3000/react-project-accelerator
+Runs the app in the development mode and launches browser to http://localhost:5000
 
 The page will reload if you make edits.
 
