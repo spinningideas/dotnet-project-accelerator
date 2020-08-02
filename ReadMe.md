@@ -154,13 +154,13 @@ For the purposes of this project accelerator the following definitions of models
 
 ### Model or Data Transfer Object (DTO)
 
-This is an object transfer data to and from an API and can contain additional datapoints for this that are not persisted (eg page size needed or response codes). This also prevents exposing the database model directly to clients so that you can refactor and change the backend without affecting the front end. Can be more than a flat structure if use case justifies it (eg a PagedList containing data payload and pagination data points)
+This is an object to transfer data to and from an API and can contain additional datapoints for this that are not persisted (eg page size needed or response codes). One purpose of separating DTOs from Entity models is to prevent exposing the database model directly to clients so that you can refactor and change the backend without affecting the front end. These models can be more than a flat structure if use cases justify it (eg a [PagedList](https://github.com/spinningideas/resources/wiki/PagedList) containing data payload and pagination data points)
 
 ### Domain Object
 
-This is an object that represents some business object (real world object in the problem domain) and can be subject of some validation logic. There are no examples of this type in this project as it is purposefully simple.
+This is an object that represents some business object (real world object in the problem domain) and can be subject of some validation logic. There are no examples of this type in this project as it is purposefully simple however you can have various flavors of this if your domain is complex enough. See [What it is](https://stackoverflow.com/questions/1863537/what-is-a-domain-model/53559615) and [relevant search](https://www.google.com/search?q=domain+driven+design+domain+model)
 
 ### Entity Object
 
-This is an object used to transfer data to the database or repository and should not contain business logic but can represent a formal object in the domain if the database tables closely mirror the domain objects. This object should have a flat structure containing
+This is an object used to transfer data to the database or repository and should not contain business logic but can represent a formal object in the domain if the database tables closely mirror the domain objects (eg Person or User). This object should have a flat structure containing
 only simple type properties/fields (strings, numbers, datetimes, booleans)
