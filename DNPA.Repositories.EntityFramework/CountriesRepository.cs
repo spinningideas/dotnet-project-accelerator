@@ -1,8 +1,8 @@
-﻿using DNPA.Models;
+﻿using DNPA.Repositories.Models;
 
 namespace DNPA.Repositories.EntityFramework
 {
-    public class CountriesRepository : EFRepository<Continent>
+    public class CountriesRepository : EFRepository<CountryEntity>
     {
         private readonly DNPADBContext _context;
 

@@ -1,0 +1,19 @@
+{
+	"about": "About",
+	"aboutdescription": "Dot Net Project Accelerator was conceived to aid starting .net core 3.x projects and provide a reference implementation for bootstrapping projects",
+	"apptitle": "Dot Net Project Accelerator",
+	"continents": "Continents",
+	"continentsdescription": "Example of use of API via services and HttpClient",
+	"continentstitle": "View Continents",
+	"countries": "Countries",
+	"countriesstitle": "View Countries",
+	"getstartedmessage": "To get started click on continents and or search",
+	"home": "Home",
+	"homepagewelcome": "Welcome to Dot Net Project Accelerator",
+	"moreinfo": "More Info",
+	"required": "Required",
+	"search": "Search",
+	"searchdescription": "Example of use of search",
+	"view": "View",
+	"welcome": "Welcome!"
+}

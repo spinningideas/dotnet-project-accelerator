@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DNPA.Models\DNPA.Models.csproj" />
+    <ProjectReference Include="..\DNPA.Repositories.Models\DNPA.Repositories.Models.csproj" />
     <ProjectReference Include="..\DNPA.Repositories\DNPA.Repositories.csproj" />
   </ItemGroup>
 

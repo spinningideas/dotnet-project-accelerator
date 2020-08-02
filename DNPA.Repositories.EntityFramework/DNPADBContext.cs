@@ -1,5 +1,5 @@
-﻿using DNPA.Models;
-using DNPA.Repositories.Mapping;
+﻿using DNPA.Repositories.Mapping;
+using DNPA.Repositories.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DNPA.Repositories.EntityFramework
@@ -19,9 +19,9 @@ namespace DNPA.Repositories.EntityFramework
             mapper.BuildModel(modelBuilder);
         }
         
-        public DbSet<Continent> Continents { get; set; }
+        public DbSet<ContinentEntity> Continents { get; set; }
 
-        public DbSet<Country> Countries { get; set; }
+        public DbSet<CountryEntity> Countries { get; set; }
     
     }
 }

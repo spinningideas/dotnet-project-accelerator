@@ -1,11 +1,9 @@
-using DNPA.Models;
+using AutoMapper;
 using DNPA.Repositories;
 using DNPA.Repositories.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Cors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +38,9 @@ namespace DNPA.API
             // Critical Generic repo to Concrete EF repo DI initialization
             // Set scoped so one is created on every request - key to unit of work pattern usage
             services.AddScoped(typeof(IRepository<>), typeof(EFRepository<>));
+
+            // Enable critical mappings used by Business Layer
+            services.AddAutoMapper(typeof(DNPA.Business.AutoMappingProfile));
 
             services.AddCors(options =>
             {

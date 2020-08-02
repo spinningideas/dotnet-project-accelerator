@@ -5,8 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DNPA.Models\DNPA.Models.csproj" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DNPA.Business.Models\DNPA.Business.Models.csproj" />
     <ProjectReference Include="..\DNPA.Repositories.EntityFramework\DNPA.Repositories.EntityFramework.csproj" />
+    <ProjectReference Include="..\DNPA.Repositories.Models\DNPA.Repositories.Models.csproj" />
     <ProjectReference Include="..\DNPA.Repositories\DNPA.Repositories.csproj" />
   </ItemGroup>
 

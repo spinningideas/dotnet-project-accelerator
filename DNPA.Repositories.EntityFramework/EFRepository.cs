@@ -1,4 +1,5 @@
-﻿using DNPA.Models;
+﻿
+using DNPA.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,7 @@ namespace DNPA.Repositories.EntityFramework
             }
         }
 
-        public async Task<Response> UpdateAsync(TEntity entity,
+        public async Task<RepositoryResponse> UpdateAsync(TEntity entity,
             CancellationToken cancellationToken = default)
         {
             if (entity == null)
@@ -79,15 +80,15 @@ namespace DNPA.Repositories.EntityFramework
                 _context.Update(entity);
                 await _context.SaveChangesAsync();
 
-                return new Response(true, "Updated Successfully");
+                return new RepositoryResponse(true, "Updated Successfully");
             }
             catch (Exception)
             {
-                return new Response(false, $"{nameof(entity)} could not be updated");
+                return new RepositoryResponse(false, $"{nameof(entity)} could not be updated");
             }
         }
 
-        public async Task<Response> DeleteAsync(TEntity entity,
+        public async Task<RepositoryResponse> DeleteAsync(TEntity entity,
             CancellationToken cancellationToken = default)
         {
             if (entity == null)
@@ -100,11 +101,11 @@ namespace DNPA.Repositories.EntityFramework
                 _context.Remove(entity);
                 await _context.SaveChangesAsync();
 
-                return new Response(true, "Deleted Successfully");
+                return new RepositoryResponse(true, "Deleted Successfully");
             }
             catch (Exception)
             {
-                return new Response(false, $"{nameof(entity)} could not be deleted");
+                return new RepositoryResponse(false, $"{nameof(entity)} could not be deleted");
             }
         }
     }

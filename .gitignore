@@ -7,6 +7,9 @@ nupkg/
 .vscode
 .vs
 
+# DB Project
+.jfm
+
 # User-specific files
 *.suo
 *.user

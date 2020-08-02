@@ -1,4 +1,4 @@
-﻿using DNPA.Models;
+﻿using DNPA.Repositories.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -10,7 +10,7 @@ namespace DNPA.Repositories.Mapping
         {
             modelBuilder.HasDefaultSchema("dbo");
 
-            modelBuilder.Entity(typeof(Continent), b =>
+            modelBuilder.Entity(typeof(ContinentEntity), b =>
                 {
                     b.ToTable("Continents");
 
@@ -24,7 +24,7 @@ namespace DNPA.Repositories.Mapping
                     b.Property<string>("ContinentName");
                 });
 
-            modelBuilder.Entity(typeof(Country), b =>
+            modelBuilder.Entity(typeof(CountryEntity), b =>
                 {
                     b.ToTable("Countries");
 

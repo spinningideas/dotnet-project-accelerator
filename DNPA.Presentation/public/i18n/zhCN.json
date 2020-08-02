@@ -1,0 +1,19 @@
+{
+  "about": "关于",
+  "aboutdescription": "Dot Net Project Accelerator旨在帮助启动.net core 3.x项目并为自举项目提供参考实现 Dot Net Project Accelerator zhǐ zài bāngzhù qǐdòng.Net core 3.X xiàngmù bìng wèi zì jǔ xiàngmù tígōng cānkǎo shíxiàn",
+  "apptitle": "Dot Net Project Accelerator",
+  "continents": "大洲",
+  "continentsdescription": "通过服务和HttpClient使用API​​的示例",
+  "continentstitle": "查看大陆",
+  "countries": "国别",
+  "countriesstitle": "查看国家",
+  "getstartedmessage": "要开始使用，请点击各大洲和或搜索",
+  "home": "家",
+  "homepagewelcome": "欢迎使用Dot Net项目加速器",
+  "moreinfo": "更多信息",
+  "required": "需要",
+  "search": "搜索",
+  "searchdescription": "使用搜索的例子",
+  "view": "视图",
+  "welcome": "欢迎"
+}

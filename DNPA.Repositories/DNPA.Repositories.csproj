@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DNPA.Models\DNPA.Models.csproj" />
+    <ProjectReference Include="..\DNPA.Repositories.Models\DNPA.Repositories.Models.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace DNPA.Repositories
 {
+    /// <summary>
+    /// Generic repository designed to encapsulate the basic set of data operations 
+    /// needed to read, create, update, and delete data within the system
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
     public interface IRepository<TEntity> where TEntity : class, new()
     {
-
         /// <summary>
         /// Finds at most ONE entity in repository having given predicate condition
         /// </summary>
@@ -29,10 +33,10 @@ namespace DNPA.Repositories
         Task<TEntity> CreateAsync(TEntity entity,
             CancellationToken cancellationToken = default);
 
-        Task<Response> UpdateAsync(TEntity entity,
+        Task<RepositoryResponse> UpdateAsync(TEntity entity,
             CancellationToken cancellationToken = default);
 
-        Task<Response> DeleteAsync(TEntity entity,
+        Task<RepositoryResponse> DeleteAsync(TEntity entity,
             CancellationToken cancellationToken = default);
     }
 }
