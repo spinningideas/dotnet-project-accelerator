@@ -1,4 +1,4 @@
-﻿namespace DNPA.Models
+﻿namespace DNPA.Repositories.Models
 {
     /// <summary>
     /// Response for repository operations within the DNPA application

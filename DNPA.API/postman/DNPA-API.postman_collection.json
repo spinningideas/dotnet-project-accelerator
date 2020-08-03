@@ -7,7 +7,7 @@
   },
   "item": [
     {
-      "name": "GetContinents",
+      "name": "Continents",
       "request": {
         "method": "GET",
         "header": [],
@@ -23,7 +23,7 @@
       "response": []
     },
     {
-      "name": "GetCountriesByContinentCode",
+      "name": "CountriesByContinentCode",
       "request": {
         "method": "GET",
         "header": [],
@@ -39,14 +39,18 @@
       "response": []
     },
     {
-      "name": "SearchCountries",
+      "name": "CountriesSearch",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
           "raw": "{\r\n    \"searchTerm\": \"united\"\r\n}",
-          "options": { "raw": { "language": "json" } }
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
         },
         "url": {
           "raw": "http://localhost:5001/countries/search",
@@ -54,6 +58,31 @@
           "host": ["localhost"],
           "port": "5001",
           "path": ["countries", "search"]
+        },
+        "description": "Get all Continents"
+      },
+      "response": []
+    },
+    {
+      "name": "CountriesPaged",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"currentPage\": 1, \"pageSize\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/countries/paged",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["countries", "paged"]
         },
         "description": "Get all Continents"
       },

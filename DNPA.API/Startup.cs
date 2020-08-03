@@ -40,7 +40,7 @@ namespace DNPA.API
             services.AddScoped(typeof(IRepository<>), typeof(EFRepository<>));
 
             // Enable critical mappings used by Business Layer
-            services.AddAutoMapper(typeof(DNPA.Business.AutoMappingProfile));
+            services.AddAutoMapper(typeof(DNPA.Business.Mapping.AutoMappingProfile));
 
             services.AddCors(options =>
             {

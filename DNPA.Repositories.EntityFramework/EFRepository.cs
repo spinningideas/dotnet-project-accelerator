@@ -1,5 +1,6 @@
 ﻿
-using DNPA.Models;
+using DNPA.Repositories.Models;
+using DNPA.Repositories.Models.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,28 @@ namespace DNPA.Repositories.EntityFramework
                 throw new Exception("Couldn't retrieve entities");
             }
         }
+
+        public async Task<PagedEntities<TEntity>> FindManyOrderedPaged(Expression<Func<TEntity, bool>> condition,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
+            int currentPage,
+            int pageSize,
+            CancellationToken cancellationToken = default)
+        {
+            try
+            {  
+                IQueryable<TEntity> query = _dbSet;
+                query = query.AsNoTracking();
+                query = query.Where(condition);
+
+                var results = await orderBy(query).ToPagedListAsync(currentPage, pageSize, cancellationToken);
+                return results;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Could not retrieve entities");
+            }
+        }
+
         public async Task<TEntity> CreateAsync(TEntity entity,
             CancellationToken cancellationToken = default)
         {

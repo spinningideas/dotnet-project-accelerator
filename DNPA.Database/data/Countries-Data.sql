@@ -1,6 +1,3 @@
---
--- 
---
 IF NOT EXISTS(SELECT TOP 1 * FROM [dbo].[Countries])
 BEGIN
 

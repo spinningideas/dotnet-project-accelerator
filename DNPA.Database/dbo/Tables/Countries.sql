@@ -7,8 +7,8 @@
     [ContinentCode]     NVARCHAR (2) NOT NULL,
     [Area]              INT NOT NULL, 
     [Population]        INT NOT NULL,
-    [Latitude]          DECIMAL(10,6) NOT NULL,
-    [Longitude]         DECIMAL(10,6) NOT NULL,
+    [Latitude]          DECIMAL(10,6) NULL,
+    [Longitude]         DECIMAL(10,6) NULL,
     [CurrencyCode]      NVARCHAR (3) NULL,
     [CurrencyName]      NVARCHAR (50) NULL,
     [Languages]         NVARCHAR (255) NULL

@@ -3,7 +3,7 @@
     /// <summary>
     /// Generic response for service operations within the DNPA application
     /// </summary>
-    public class Response
+    public class Response<T>
     {
         public Response(bool success, string messages)
         {
@@ -20,5 +20,7 @@
         /// Any messages related to success or failure of the operation.
         /// </summary>
         public string Messages { get; set; }
+
+        public T Data { get; set; }
     }
 }

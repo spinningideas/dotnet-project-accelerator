@@ -4,8 +4,10 @@ using DNPA.Models;
 using DNPA.Repositories;
 using DNPA.Repositories.Models;
 using LinqKit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DNPA.Business
@@ -36,6 +38,17 @@ namespace DNPA.Business
             condition.Start(c => c.CountryName.Contains(searchTerm));
             var countriesEntities =  await _repository.FindMany(condition);
             var countries = _mapper.Map<List<Country>>(countriesEntities);
+            return countries;
+        }
+
+        public async Task<PagedResponse<Country>> Paged(CountriesPaged paged)
+        {
+            var condition = PredicateBuilder.New<CountryEntity>(true);
+            Func<IQueryable<CountryEntity>, IOrderedQueryable<CountryEntity>> orderBy =
+  query => query.OrderBy(c => c.CountryName);
+
+            var countriesEntities = await _repository.FindManyOrderedPaged(condition, orderBy, paged.CurrentPage, paged.PageSize);
+            var countries = _mapper.Map<PagedResponse<Country>>(countriesEntities);
             return countries;
         }
 

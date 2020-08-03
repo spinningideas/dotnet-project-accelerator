@@ -38,5 +38,11 @@ namespace DNPA.API.Controllers
         {
             return await _manager.Search(search.SearchTerm);
         }
+
+        [HttpPost("paged")]
+        public async Task<PagedResponse<Country>> Paged(CountriesPaged paged)
+        {
+            return await _manager.Paged(paged);
+        }
     }
 }
